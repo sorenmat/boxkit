@@ -13,6 +13,7 @@ RUN rm /extra-packages
 
 # Install from testing
 RUN apk add hub --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/
+RUN apk add kubectl --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/
 
 # Install gcloud
 
@@ -24,7 +25,7 @@ RUN wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud
     ln -s /lib /lib64 && \
     gcloud config set core/disable_usage_reporting true && \
     gcloud --version
-
+RUN gcloud components install gke-gcloud-auth-plugin
 #
 # Install Eclipse JDK
 #
@@ -78,3 +79,4 @@ RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/transactional-update
      
+ENTRYPOINT /bin/zsh
