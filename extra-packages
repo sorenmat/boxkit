@@ -20,12 +20,14 @@ libcanberra
 libcanberra-gtk3
 make
 maven
+mesa-gbm
 micro
 ncdu
 ncurses
 neofetch
 neovim
 npm
+nss
 openssl
 plocate
 python3
