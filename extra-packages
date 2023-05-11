@@ -16,6 +16,7 @@ fzf
 github-cli
 helix
 just
+jq
 libcanberra
 libcanberra-gtk3
 make
@@ -43,3 +44,7 @@ zsh
 zsh-history-substring-search
 zsh-autosuggestions
 zsh-syntax-highlighting
+terraform
+kustomize
+docker-cli-compose
+g++
